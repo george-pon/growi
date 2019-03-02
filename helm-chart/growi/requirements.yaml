@@ -1,0 +1,7 @@
+dependencies:
+- name: mongodb
+  version: 5.7.0
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  condition: mongodb.enabled
+  tags:
+    - growi-database
