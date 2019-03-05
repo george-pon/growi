@@ -20,10 +20,30 @@ pushd helm-chart
     PRESENT=$( helm list growi )
     if [ -z "$PRESENT" ] ; then
         # use local image name
-        helm install growi --name growi --set image.pullPolicy=Always
+        helm install growi --name growi \
+        --values - << "EOF"
+settings:
+  appsiteurl: http://growi.minikube.local
+ingress:
+  enabled: true
+  hosts:
+    - growi.minikube.local
+  paths:
+    - /
+EOF
     else
         # use local image name
-        helm upgrade growi growi --set image.pullPolicy=Always
+        helm upgrade growi growi \
+        --values - << "EOF"
+settings:
+  appsiteurl: http://growi.minikube.local
+ingress:
+  enabled: true
+  hosts:
+    - growi.minikube.local
+  paths:
+    - /
+EOF
     fi
     # wait for deploy
     kubectl rollout status deploy/growi
