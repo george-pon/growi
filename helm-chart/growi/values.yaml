@@ -16,7 +16,7 @@ mongodb:
 
 image:
   repository: weseek/growi
-  tag: 3.3-nocdn
+  tag: 3.4.2-nocdn
   pullPolicy: IfNotPresent
 
 nameOverride: ""
