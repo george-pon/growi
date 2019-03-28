@@ -11,9 +11,9 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 3000
       protocol: TCP
-      name: http
+      name: port3000
   selector:
     app.kubernetes.io/name: {{ include "growi.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
