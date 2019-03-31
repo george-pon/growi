@@ -3,11 +3,11 @@ entries:
   growi:
   - apiVersion: v1
     appVersion: 3.4.2
-    created: 2019-03-29T00:28:18.3731334+09:00
+    created: 2019-03-31T23:59:39.5822363+09:00
     description: A Helm chart growi for Kubernetes
-    digest: fb356bd78ef5d44121da063cd8210570c4fee1400c40a0f23299178b562803b3
+    digest: 4f48e740609703d674d0b9859bfafff4bd3b6f80e6d6c883a8a536ee240c185d
     name: growi
     urls:
-    - https://raw.githubusercontent.com/george-pon/growi-helm-chart/master/helm-chart/charts/growi-3.4.2.0.tgz
-    version: 3.4.2.0
-generated: 2019-03-29T00:28:18.370206+09:00
+    - https://raw.githubusercontent.com/george-pon/growi-helm-chart/master/helm-chart/charts/growi-0.1.3.tgz
+    version: 0.1.3
+generated: 2019-03-31T23:59:39.5783285+09:00
