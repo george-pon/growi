@@ -1,5 +1,5 @@
 apiVersion: v1
-appVersion: "3.4.2"
+appVersion: "3.4.5"
 description: A Helm chart growi for Kubernetes
 name: growi
-version: 0.1.3
+version: 3.4.5

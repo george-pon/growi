@@ -36,14 +36,20 @@ spec:
         - name: APP_SITE_URL
           value: {{ . }}
         {{- end }}
-        #livenessProbe:
-        #  httpGet:
-        #    path: /
-        #    port: 3000
-        #readinessProbe:
-        #  httpGet:
-        #    path: /
-        #    port: 3000
+        livenessProbe:
+          tcpSocket:
+            port: 3000
+          initialDelaySeconds: 300
+          periodSeconds: 10
+          failureThreshold: 30
+          successThreshold: 1
+        readinessProbe:
+          tcpSocket:
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          failureThreshold: 30
+          successThreshold: 1
         resources:
           {{- toYaml .Values.resources | nindent 10 }}
       {{- with .Values.nodeSelector }}
